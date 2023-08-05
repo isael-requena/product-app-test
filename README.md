@@ -1,7 +1,6 @@
 # product-app-test
-Curso de ionic enseñado por Isael Requena
-
-App de ejemplo
+> Ionic course taught by me
+> Product application example
 
 ## Product Slider
 <img width="850" src="src/assets/img/screenshots/Screenshot_1.png" alt="Screenshot 1 Banner" />
