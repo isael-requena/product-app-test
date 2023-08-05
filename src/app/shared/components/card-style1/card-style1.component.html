@@ -1,0 +1,17 @@
+<ion-card [ngClass]="{'card-little': showLittle}">
+  <img class="image_product" [alt]="product?.title" [src]="product?.image"/>
+  <ion-card-header>
+    <ion-card-title [ngClass]="showLittle ? 'ellipsis' : ''">
+       {{product?.title}} 
+      </ion-card-title>
+    <ion-card-subtitle [ngClass]="showLittle ? 'ellipsis' : ''">
+      {{product?.price}} 
+    </ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-label [ngClass]="showLittle ? 'ellipsis' : ''">
+      {{product?.description}}
+    </ion-label>
+  </ion-card-content>
+</ion-card>

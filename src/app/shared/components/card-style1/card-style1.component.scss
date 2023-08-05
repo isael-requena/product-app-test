@@ -1,0 +1,22 @@
+ion-card {
+    box-shadow: var(--app-shadow);
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+.card-little {
+    max-width: 250px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.image_product {
+    max-width: 100%;
+    height: 250px;
+    object-fit: contain;
+    width: 100%;
+}

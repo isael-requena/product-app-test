@@ -1,0 +1,32 @@
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar class="gradient" mode="ios">
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <div class="main-content">
+    <div class="title_flex">
+      <ion-title>Productos</ion-title>
+      <a class="arrow_container">
+        <ion-label>Ver todos</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </a>
+    </div>
+    <div class="slider-products">
+      <swiper-container slides-per-view="2.5">
+        <swiper-slide *ngFor="let product of products">
+          <div class="card_container">
+            <app-card-style1 [showLittle]="true" [product]="product"></app-card-style1>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+    <div class="title_flex">
+      <ion-title>Más productos</ion-title>
+    </div>
+    <div class="grid-products-container">
+      <app-card-style1 *ngFor="let product of products" [product]="product"></app-card-style1>
+    </div>
+  </div>
+</ion-content>
