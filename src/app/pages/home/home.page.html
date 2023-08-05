@@ -14,7 +14,7 @@
       </a>
     </div>
     <div class="slider-products">
-      <swiper-container slides-per-view="2.5">
+      <swiper-container slides-per-view="2.5" navigation="true" loop="true" autoplay-delay="3000">
         <swiper-slide *ngFor="let product of products">
           <div class="card_container">
             <app-card-style1 [showLittle]="true" [product]="product"></app-card-style1>
