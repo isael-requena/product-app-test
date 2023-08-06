@@ -1,0 +1,79 @@
+.bg_image {
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        font-size: 25px;
+        color: white;
+        padding: 20px;
+    }
+}
+.main_content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_responsive {
+    @media only screen and (max-width: 431px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.card_container {
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-width: 573px;
+    margin: 0 auto 30px;
+}
+
+.card_footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h3 {
+        // width: 70%;
+        width: calc(100% - 109px);
+    }
+
+    button {
+        width: 109px !important;
+        font-size: 20px;
+    }
+}
+
+.heart_icon {
+    float: right;
+    font-size: 25px;
+    background: #ff1111;
+    padding: 7px;
+    border-radius: 50%;
+    color: white;
+}
+
+.title_flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    
+    .star_icon {
+        color: #fff900;
+    }
+    ion-label.title {
+        font-weight: bold;
+    }
+}
+
+.overflow_scroll {
+    overflow: scroll;
+}

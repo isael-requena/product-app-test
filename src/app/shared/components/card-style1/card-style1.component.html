@@ -1,4 +1,4 @@
-<ion-card [ngClass]="{'card-little': showLittle}">
+<ion-card [ngClass]="{'card-little': showLittle}" (click)="goToDetails()">
   <img class="image_product" [alt]="product?.title" [src]="product?.image"/>
   <ion-card-header>
     <ion-card-title [ngClass]="showLittle ? 'ellipsis' : ''">

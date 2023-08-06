@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="gradient">
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalles del producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="showPopoverFn()">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-modal mode="ios" [isOpen]="showPopover" (willDismiss)="showPopover = false">
+    <ng-template>
+      <ion-header mode="ios">
+        <ion-toolbar mode="ios">
+          <ion-title>Carrito de compras</ion-title>
+          <ion-buttons slot="end">
+            <ion-button mode="ios" (click)="showPopover = false" [strong]="true">Atrás</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <div *ngIf="productCartList && productCartList.length">
+          <ion-list mode="ios" >
+            <ion-item mode="ios" *ngFor="let product of productCartList">
+              <ion-thumbnail slot="start">
+              <img [alt]="product?.title" [src]="product?.image" />
+            </ion-thumbnail>
+            <ion-label> {{product?.title}} </ion-label>
+          </ion-item>
+          <ion-item mode="ios">
+            Total: ${{totalPriceSuma}}
+          </ion-item>
+        </ion-list>
+      </div>
+        <h5 *ngIf="productCartList && !productCartList.length">
+          No tienes productos agregados al carrito
+        </h5>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+      <!-- <ion-popover mode="ios" #popover [isOpen]="showPopover" (didDismiss)="showPopover = false">
+        <ng-template>
+        
+        </ng-template>
+      </ion-popover> -->
+  <div class="main_content">
+    <div class="card_container">
+      <!-- Product image -->
+      <div class="bg_image" [style.backgroundImage]="'url('+ product?.image +')'">
+        <ion-icon class="heart_icon" name="heart-outline"></ion-icon>
+      </div>
+      <!-- product image end -->
+      <div class="card_footer">
+        <h3>
+          <strong>
+            {{product?.title}}
+          </strong>
+        </h3>
+        <button class="button-34" role="button"> ${{product?.price}} </button>
+      </div>
+    </div>
+
+    <div class="title_flex display_flex">
+      <ion-label class="title">
+        Description
+      </ion-label> 
+      <ion-label>
+        <ion-icon class="star_icon" name="star"></ion-icon>
+        {{product?.rating?.rate}}
+      </ion-label>
+    </div>
+    <p>
+      {{product?.description}}
+    </p>
+  </div>
+  <app-cart-button [productTitle]="product?.title" [product]="product" [productPrice]="product?.price" (totalPriceEmit)="eventSumaPrice($event)"
+    (productEmit)="eventProductList($event)">
+  </app-cart-button>
+</ion-content>

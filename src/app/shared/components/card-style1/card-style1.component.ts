@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductInterface } from '../../../interfaces/product.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-style1',
@@ -11,8 +12,14 @@ export class CardStyle1Component  implements OnInit {
   @Input() showLittle: boolean = false;
   @Input() product: ProductInterface | undefined;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {}
+
+  goToDetails() {
+    this.router.navigate(['product-details', `${this.product?.id}`])
+  }
 
 }
