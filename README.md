@@ -10,9 +10,9 @@
 <img width="850" src="src/assets/img/screenshots/Screenshot_2.png" alt="Screenshot 2 Banner" />
 
 ## Product Details
-<img width="412" src="src/assets/img/screenshots/Screenshot_3.png" alt="Screenshot 3 Image" />
+<img width="400" src="src/assets/img/screenshots/Screenshot_3.png" alt="Screenshot 3 Image" />
 
-<img width="494" src="src/assets/img/screenshots/Screenshot_4.png" alt="Screenshot 4 Image" />
+<img width="400" src="src/assets/img/screenshots/Screenshot_4.png" alt="Screenshot 4 Image" />
 
 ## Cart product list
-<img width="600" src="src/assets/img/screenshots/Screenshot_5.png" alt="Screenshot 4 Image />
+<img width="600" src="src/assets/img/screenshots/Screenshot_5.png" alt="Screenshot 4 Image" />
